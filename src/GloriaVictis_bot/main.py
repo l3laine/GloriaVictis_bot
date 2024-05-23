@@ -1,10 +1,12 @@
+import asyncio
 import datetime
-import os
-import discord
 import logging
+import discord
 import command_operations
 
-from src.GloriaVictis_bot.discordReadWrite import get_config_from_json, get_config_parameter, get_supported_commands, \
+from gui.gui_handler import run_gui
+
+from src.GloriaVictis_bot.discordReadWrite import get_config_from_json, get_supported_commands, \
     check_json_integrity, get_discord_token
 from src.GloriaVictis_bot.logging_utilities import prepare_logger
 
@@ -17,7 +19,6 @@ page = config["page"]
 command_ops = command_operations.CommOp()
 
 client = command_ops.get_client()
-
 
 async def schedule_daily_message():
     current = datetime.datetime.now()
@@ -34,6 +35,7 @@ async def on_ready():
     print(json_integrity_print)
     prepare_logger()
     logger.info(json_integrity_result)
+    run_gui()
 
 
 @client.event
