@@ -108,21 +108,21 @@ your own proper Discord token with adequate privilages (more on Discord token ca
 ### Prerequisites
 
 Get your own Discord token for the Discord channel of your choice. How?
-<a href="https://www.writebots.com/discord-bot-token/"Find out</a>.
+<a href="https://www.writebots.com/discord-bot-token/">Find out</a>.
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/l3laine/GloriaVictis_bot.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Create Discord token file
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   In /config directory, create token.json file.
+   Paste the following structure:
+   {"token": "YOUR_TOKEN"}
+   Never share the token file or the token itself with anybody.
+   The file is added to .gitignore and must be created manually.
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
